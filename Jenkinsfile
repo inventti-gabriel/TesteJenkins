@@ -13,18 +13,15 @@ pipeline {
         milestone 1
       }
     }
-    stage('Compilar') {
-      agent {
-        node {
-          label 'Windows'
+    node('Windows') {
+      stage('Compilar') {
+        when {
+          beforeAgent true
+          expression { BRANCH_NAME ==~ /(master|v_.*)/ }
         }
-      }
-      when {
-        beforeAgent true
-        expression { BRANCH_NAME ==~ /(master|v_.*)/ }
-      }
-      steps {
-        bat 'build Compilar'
+        steps {
+          bat 'build Compilar'
+        }
       }
     }
 
