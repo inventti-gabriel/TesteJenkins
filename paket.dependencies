@@ -1,0 +1,12 @@
+framework: net462
+references: strict
+
+source https://www.nuget.org/api/v2
+
+nuget NSubstitute = 1.10.0.0
+nuget log4net = 1.2.10
+nuget Topshelf
+nuget NUnit = 2.6.1
+nuget NUnit.Runners = 2.6.1
+nuget FAKE ~> 4
+nuget NUnitTestAdapter 2.0.0

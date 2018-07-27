@@ -1,0 +1,11 @@
+REFERENCES: STRICT
+RESTRICTION: == net462
+NUGET
+  remote: https://www.nuget.org/api/v2
+    FAKE (4.64.13)
+    log4net (1.2.10)
+    NSubstitute (1.10)
+    NUnit (2.6.1)
+    NUnit.Runners (2.6.1)
+    NUnitTestAdapter (2.0)
+    Topshelf (4.0.4)
