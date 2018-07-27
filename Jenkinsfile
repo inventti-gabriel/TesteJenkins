@@ -13,6 +13,9 @@ pipeline {
   }
   stages {
     stage('Compilar') {
+      when {
+        expression { BRANCH_NAME ==~ /(master|v_.*)/ }
+      }
       steps {
         bat 'build Compilar'
       }
@@ -23,6 +26,7 @@ pipeline {
         //bat 'build Testes'
         //nunit(testResultsPattern: 'TestResult.xml', failIfNoResults: true)
         print "Testes ignorados"
+        input message: 'Proceder com a liberação em produtos?'
       }
     }
   }
