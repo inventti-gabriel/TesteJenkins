@@ -1,5 +1,5 @@
 REFERENCES: STRICT
-RESTRICTION: == net462
+RESTRICTION: == net452
 NUGET
   remote: http://192.168.0.237:8081/repository/edocs
     Edocs.Documentacao (51)
