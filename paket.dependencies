@@ -2,6 +2,7 @@ framework: net462
 references: strict
 
 source https://www.nuget.org/api/v2
+source http://192.168.0.237:8081/repository/edocs/
 
 nuget NSubstitute = 1.10.0.0
 nuget log4net = 1.2.10
@@ -10,3 +11,4 @@ nuget NUnit = 2.6.1
 nuget NUnit.Runners = 2.6.1
 nuget FAKE ~> 4
 nuget NUnitTestAdapter 2.0.0
+nuget Edocs.Documentacao

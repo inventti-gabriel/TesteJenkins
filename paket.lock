@@ -1,11 +1,19 @@
 REFERENCES: STRICT
 RESTRICTION: == net462
 NUGET
+  remote: http://192.168.0.237:8081/repository/edocs
+    Edocs.Documentacao (51)
+      Graphviz
+      PlantUML
+      python
+    PlantUML (1.0.0)
   remote: https://www.nuget.org/api/v2
     FAKE (4.64.13)
+    Graphviz (2.38.0.2)
     log4net (1.2.10)
     NSubstitute (1.10)
     NUnit (2.6.1)
     NUnit.Runners (2.6.1)
     NUnitTestAdapter (2.0)
+    python (3.7)
     Topshelf (4.0.4)
