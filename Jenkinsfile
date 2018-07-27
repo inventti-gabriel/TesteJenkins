@@ -14,7 +14,7 @@ pipeline {
   stages {
     stage('Inicio') {
       steps {
-        milestone()
+        milestone 1
       }
     }
     stage('Compilar') {
