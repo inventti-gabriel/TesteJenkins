@@ -8,6 +8,8 @@ pipeline {
     choice(name: 'sequencia',
       choices: 'A - Executor\nZ - Tudo',
       description: 'Opção de execução:')
+    string(name: 'versao',
+      description: 'Número da versão:')
   }
   stages {
     stage('Compilar') {
