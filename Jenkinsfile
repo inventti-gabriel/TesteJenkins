@@ -1,5 +1,5 @@
 pipeline {
-  agente none
+  agent none
   parameters {
     choice(name: 'sequencia',
       choices: 'A - Executor\nZ - Tudo',
