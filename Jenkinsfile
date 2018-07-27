@@ -27,6 +27,7 @@ pipeline {
     }
 
     stage('Testes') {
+      agent none
       steps {
         //bat 'build Testes'
         //nunit(testResultsPattern: 'TestResult.xml', failIfNoResults: true)
