@@ -1,5 +1,9 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'Windows'
+    }
+  }
   parameters {
     choice(name: 'sequencia',
       choices: 'A - Executor\nZ - Tudo',
