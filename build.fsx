@@ -7,12 +7,10 @@ open Fake.ChangeLogHelper
 open Fake.Testing
 open System.IO
 
-let deployDir = "./deploy/"
-let deployServiceDir = deployDir + "1.Executor"
+let deployDiretorio = "./deploy/"
 
-let executorProject = "Executor.csproj"
-let executorPath = "source/app/Executor/"
-let testDir = "source/testes"
+let projetoSolucao = "TesteJenkins.sln"
+let projetoDiretorio = "source/"
 
 let Executar = (fun filename ->
   let result = ExecProcess (fun info -> 
@@ -24,15 +22,15 @@ let Executar = (fun filename ->
 )
 
 Target "Clean" (fun _ -> 
-  CleanDirs [deployDir]
+  CleanDirs [deployDiretorio]
 )
 
-Target "Executor" (fun _ ->
-  MSBuild (executorPath + "/bin") "Build" [ "Configuration", "Release"; "Platform", "x86"; "DefineConstants", "TRACE"; ] ([executorPath + executorProject]) |> Log "AppBuild-Output"
+Target "Compilar" (fun _ ->
+  MSBuild (projetoDiretorio + "/bin") "Build" [ "Configuration", "Release"; "Platform", "x86"; "DefineConstants", "TRACE"; ] ([projetoDiretorio + projetoSolucao]) |> Log "AppBuild-Output"
 )
 
 Target "Testes" (fun _ ->
-    !! (testDir + "/**/*Testes.dll")
+    !! (projetoDiretorio + "/bin/*Testes.dll")
     |> NUnit (fun p ->
           {p with ToolPath = "packages/NUnit.Runners/tools/"}) )
 
@@ -43,8 +41,8 @@ Target "Docs" (fun _ ->
 )
 
 "Clean"
-  ==> "Executor"
-  ==> "Testes"
+  ==> "Compilar"
+//  ==> "Testes"
 
 // start build
-RunTargetOrDefault "Testes"
+RunTargetOrDefault "Compilar"

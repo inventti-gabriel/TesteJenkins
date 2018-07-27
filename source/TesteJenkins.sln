@@ -10,22 +10,22 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testes", "testes\Testes\Tes
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BD848B31-4CCC-4616-9071-BA414136F104}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BD848B31-4CCC-4616-9071-BA414136F104}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BD848B31-4CCC-4616-9071-BA414136F104}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BD848B31-4CCC-4616-9071-BA414136F104}.Release|Any CPU.Build.0 = Release|Any CPU
-		{22CF5D7D-04AA-4E95-B431-42D6282906B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{22CF5D7D-04AA-4E95-B431-42D6282906B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{22CF5D7D-04AA-4E95-B431-42D6282906B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{22CF5D7D-04AA-4E95-B431-42D6282906B1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2406356C-445E-4706-967C-1A611B20F8C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2406356C-445E-4706-967C-1A611B20F8C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2406356C-445E-4706-967C-1A611B20F8C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2406356C-445E-4706-967C-1A611B20F8C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22CF5D7D-04AA-4E95-B431-42D6282906B1}.Debug|x86.ActiveCfg = Debug|x86
+		{22CF5D7D-04AA-4E95-B431-42D6282906B1}.Debug|x86.Build.0 = Debug|x86
+		{22CF5D7D-04AA-4E95-B431-42D6282906B1}.Release|x86.ActiveCfg = Release|x86
+		{22CF5D7D-04AA-4E95-B431-42D6282906B1}.Release|x86.Build.0 = Release|x86
+		{BD848B31-4CCC-4616-9071-BA414136F104}.Debug|x86.ActiveCfg = Debug|x86
+		{BD848B31-4CCC-4616-9071-BA414136F104}.Debug|x86.Build.0 = Debug|x86
+		{BD848B31-4CCC-4616-9071-BA414136F104}.Release|x86.ActiveCfg = Release|x86
+		{BD848B31-4CCC-4616-9071-BA414136F104}.Release|x86.Build.0 = Release|x86
+		{2406356C-445E-4706-967C-1A611B20F8C6}.Debug|x86.ActiveCfg = Debug|x86
+		{2406356C-445E-4706-967C-1A611B20F8C6}.Debug|x86.Build.0 = Debug|x86
+		{2406356C-445E-4706-967C-1A611B20F8C6}.Release|x86.ActiveCfg = Release|x86
+		{2406356C-445E-4706-967C-1A611B20F8C6}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{2406356C-445E-4706-967C-1A611B20F8C6} = {50AB0E22-76A8-41D4-83A2-F0BF6D26DCFD}
