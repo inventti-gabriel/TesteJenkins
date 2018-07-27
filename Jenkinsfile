@@ -13,21 +13,17 @@ pipeline {
         milestone 1
       }
     }
-
-    lock('um-por-vez') {
-      stage('Compilar') {
-        when {
-          beforeAgent true
-          expression { BRANCH_NAME ==~ /(master|v_.*)/ }
-        }
-        node('Windows') {
-          steps {
-            bat 'build Compilar'
-          }
+    stage('Compilar') {
+      when {
+        beforeAgent true
+        expression { BRANCH_NAME ==~ /(master|v_.*)/ }
+      }
+      node('Windows') {
+        steps {
+          bat 'build Compilar'
         }
       }
     }
-
     stage('Testes') {
       agent none
       steps {
