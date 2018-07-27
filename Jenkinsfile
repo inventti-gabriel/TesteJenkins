@@ -1,9 +1,5 @@
 pipeline {
-  agent {
-    node {
-      label 'Windows'
-    }
-  }
+  agente none
   parameters {
     choice(name: 'sequencia',
       choices: 'A - Executor\nZ - Tudo',
@@ -18,7 +14,13 @@ pipeline {
       }
     }
     stage('Compilar') {
+      agent {
+        node {
+          label 'Windows'
+        }
+      }
       when {
+        beforeAgent true
         expression { BRANCH_NAME ==~ /(master|v_.*)/ }
       }
       steps {
