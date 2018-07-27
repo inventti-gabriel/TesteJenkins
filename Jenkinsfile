@@ -15,5 +15,12 @@ pipeline {
         bat 'build Executor'
       }
     }
+
+    stage('Testes') {
+      steps {
+        bat 'build Testes'
+        nunit(testResultsPattern: 'TestResult.xml', failIfNoResults: true)
+      }
+    }
   }
 }
