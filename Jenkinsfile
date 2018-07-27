@@ -12,6 +12,11 @@ pipeline {
       description: 'Número da versão:')
   }
   stages {
+    stage('Inicio') {
+      steps {
+        milestone()
+      }
+    }
     stage('Compilar') {
       when {
         expression { BRANCH_NAME ==~ /(master|v_.*)/ }
