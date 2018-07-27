@@ -1,4 +1,4 @@
-framework: net452
+framework: net4, net452
 references: strict
 
 source https://www.nuget.org/api/v2
