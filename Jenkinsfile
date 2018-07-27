@@ -14,14 +14,17 @@ pipeline {
       }
     }
     stage('Compilar') {
+      agent {
+        node {
+          label 'Windows'
+        }
+      }
+      steps {
+        bat 'build Compilar'
+      }
       when {
         beforeAgent true
         expression { BRANCH_NAME ==~ /(master|v_.*)/ }
-      }
-      node('Windows') {
-        steps {
-          bat 'build Compilar'
-        }
       }
     }
     stage('Testes') {
